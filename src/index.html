@@ -1,18 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Taleed</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Taleed by Aramco supports SME development through services, partnerships, innovation, and opportunities.">
+  <title>SME Development &amp; Growth Program in Saudi Arabia | Aramco Taleed</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div class="container py-5">
-    <h1>Taleed</h1>
-    <p class="lead">Website is up and running.</p>
+  <header class="site-header fixed-top">
+    <nav class="navbar navbar-expand-xl container-xl">
+      <a class="navbar-brand" href="#home" aria-label="Taleed home">
+        <img src="assets/taleed-logo.webp" alt="Aramco Taleed" class="brand-logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNavigation">
+        <ul class="navbar-nav ms-auto align-items-xl-center gap-xl-4">
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#partnerships">Ecosystem Partnerships</a></li>
+          <li class="nav-item"><a class="nav-link" href="#partners">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#partners">News</a></li>
+          <li class="nav-item language-link"><a class="nav-link" href="#" lang="ar">العربية</a></li>
+          <li class="nav-item d-xl-none mt-3"><a class="btn btn-taleed w-100" href="#connect">Get Connected <span aria-hidden="true">&#8594;</span></a></li>
+        </ul>
+      </div>
+      <a class="btn btn-taleed header-cta d-none d-xl-flex" href="#connect">Get Connected <span aria-hidden="true">&#8594;</span></a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero-shell" aria-label="Taleed highlights">
+      <div class="home-swiper swiper">
+        <div class="swiper-wrapper">
+          <article class="swiper-slide" style="--hero-image: url('assets/home/asset-8-1.png')">
+            <div class="hero-shade"></div>
+            <div class="hero-content container-xl">
+              <h1 data-swiper-parallax="-100">Specialized Offerings <br>for SMEs to Lead,<br> Optimize, and Thrive</h1>
+              <a class="hero-button" data-swiper-parallax="-200" href="#services">Find Out More <span class="round-arrow" aria-hidden="true">&#8594;</span></a>
+            </div>
+          </article>
+          <article class="swiper-slide" style="--hero-image: url('assets/home/frame-1707483741.png')">
+            <div class="hero-shade"></div>
+            <div class="hero-content container-xl">
+              <h2 data-swiper-parallax="-100">Transforming Industries: <br>Unlocking Growth <br>Together</h2>
+              <a class="hero-button" data-swiper-parallax="-200" href="#partnerships">Submit Business Opportunity <span class="round-arrow" aria-hidden="true">&#8594;</span></a>
+            </div>
+          </article>
+          <article class="swiper-slide" style="--hero-image: url('assets/home/03-1-1767018454.png')">
+            <div class="hero-shade"></div>
+            <div class="hero-content container-xl">
+              <h2 data-swiper-parallax="-100">Empowering SME Creation, <br>Localization, Growth, <br>And Capabilities Building</h2>
+              <a class="hero-button" data-swiper-parallax="-200" href="#services">View Services <span class="round-arrow" aria-hidden="true">&#8594;</span></a>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-controls-home">
+          <button class="swiper-button-prev-home" type="button" aria-label="Previous slide">
+            <svg width="31" height="32" viewBox="0 0 31 32" fill="none" aria-hidden="true"><path d="M12.9166 21.3142L18.0833 16.1475L12.9166 10.9808" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="swiper-pagination-home" aria-label="Slide position"></div>
+          <button class="swiper-button-next-home" type="button" aria-label="Next slide">
+            <svg width="31" height="32" viewBox="0 0 31 32" fill="none" aria-hidden="true"><path d="M12.9166 21.3142L18.0833 16.1475L12.9166 10.9808" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro-section section-wrap" id="about">
+      <button class="intro-video" type="button" data-bs-toggle="modal" data-bs-target="#introVideo" aria-label="Play Taleed introduction video">
+        <span class="play-button" aria-hidden="true">&#9654;</span>
+      </button>
+      <div class="intro-copy">
+        <h2>Taleed, an engine of opportunities</h2>
+        <p>Taleed is Aramco’s comprehensive program dedicated to creating, growing, and sustaining Small &amp; Medium Enterprises (SMEs) in the Kingdom.<br><br>Acting as a catalyst for change, it unlocks capital, develops commercial ecosystems, drives SME growth, and nurtures scalable, sustainable job creation. By transforming aspirations into achievements and forging strategic alliances, Taleed empowers SMEs to thrive and achieve lasting impact.</p>
+        <a class="btn btn-taleed intro-cta" href="#services">Find out More <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </section>
+
+    <section class="content-band" id="services">
+      <div class="section-wrap section-heading">
+        <h2>Enabling SMEs to Create, Grow, and Sustain</h2>
+      </div>
+      <div class="section-wrap card-grid">
+        <article class="enable-card">
+          <img src="assets/sme-enable-1-1767613537.png" alt="SME creation and business planning">
+          <div class="enable-card-copy"><h3>New SME Creation</h3><p>Taleed aims to be an instrumental partner in enabling Aramco’s ecosystem and the Kingdom’s SME economic development.</p></div>
+        </article>
+        <article class="enable-card">
+          <img src="assets/enabling--smes-2.png" alt="Growing small and medium enterprises">
+          <div class="enable-card-copy"><h3>SME Growth support</h3><p>Taleed focuses on SME development and growth through a portfolio of initiatives and support programs that enable capability building.</p></div>
+        </article>
+        <article class="enable-card">
+          <img src="assets/enabling--smes-3.png" alt="Building local capabilities">
+          <div class="enable-card-copy"><h3>Building Local Capabilities</h3><p>We empower Saudi talent for future job requirements, entrepreneurship, and SME sustainability.</p></div>
+        </article>
+      </div>
+      <div class="text-center section-wrap service-action"><a class="btn btn-taleed" href="#services">Discover Services <span aria-hidden="true">&#8594;</span></a></div>
+    </section>
+
+    <section class="section-wrap opportunity-section" id="partnerships">
+      <div class="section-heading"><h2>Partnerships and Opportunities That Enable Growth</h2></div>
+      <div class="opportunity-grid">
+        <article class="opportunity-card">
+          <img src="assets/partnership.svg" alt="">
+          <h3>Ecosystem Partnerships</h3>
+          <p>Empowering SMEs through strategic public-private collaborations, driving SME business growth and sustainability.</p>
+          <a href="#connect">Find out More <span aria-hidden="true">&#8594;</span></a>
+        </article>
+        <article class="opportunity-card">
+          <img src="assets/investment-opportunities-1767616384.svg" alt="">
+          <h3>Investment Opportunities</h3>
+          <p>Supporting SME investments in Industrial, Manufacturing, Digital, and Sustainability sectors, creating opportunities that deliver meaningful impact for the Aramco ecosystem and the Kingdom.</p>
+          <a href="#connect">Submit Business Opportunity <span aria-hidden="true">&#8594;</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="impact-section">
+      <div class="section-wrap">
+        <div class="section-heading"><h2>Aramco Taleed’s Impact at a Glance</h2></div>
+        <div class="impact-grid">
+          <article class="impact-card"><span class="impact-icon" aria-hidden="true">&#9635;</span><strong class="stat-value" data-count="17">0</strong><p>Helped new businesses<br>establish in KSA</p></article>
+          <article class="impact-card"><span class="impact-icon" aria-hidden="true">&#9638;</span><strong class="stat-value" data-count="2900">0</strong><p>SME’s<br>Supported</p></article>
+          <article class="impact-card"><span class="impact-icon" aria-hidden="true">&#9671;</span><strong class="stat-value" data-count="40">0</strong><p>Localization Investment<br>Opportunities</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap focus-section" id="focus">
+      <div class="section-heading"><h2>Four Key Focus Areas</h2></div>
+      <div class="focus-grid">
+        <article class="focus-card" style="--focus-image:url('assets/home/sustainability.png')"><h3>Sustainability</h3></article>
+        <article class="focus-card" style="--focus-image:url('assets/home/manufacturing.png')"><h3>Manufacturing</h3></article>
+        <article class="focus-card" style="--focus-image:url('assets/home/industrial.png')"><h3>Industrial</h3></article>
+        <article class="focus-card" style="--focus-image:url('assets/home/digital.png')"><h3>Digital</h3></article>
+      </div>
+    </section>
+
+    <section class="partners-section" id="partners">
+      <div class="section-wrap"><div class="section-heading"><h2>Our Partners</h2></div></div>
+      <div class="partner-marquee" aria-label="Taleed partners">
+        <div class="partner-track">
+          <img src="assets/home/sponsor/future-work-logo.webp" alt="Future Work">
+          <img src="assets/home/sponsor/technical-and-vocational-training-logo.webp" alt="Technical and Vocational Training Corporation">
+          <img src="assets/home/sponsor/al-rajhi-financial-solutions-logo.webp" alt="Al Rajhi Financial Solutions">
+          <img src="assets/home/sponsor/lamar-holding-logo.webp" alt="Lamar Holding">
+          <img src="assets/home/sponsor/social-development-bank-logo.webp" alt="Social Development Bank">
+          <img src="assets/home/sponsor/energy-capital-group-logo.webp" alt="Energy Capital Group">
+          <img src="assets/home/sponsor/dafater-logo.webp" alt="Dafater">
+          <img src="assets/home/sponsor/odoo-logo.webp" alt="Odoo">
+          <img src="assets/home/sponsor/ziwo-logo.webp" alt="Ziwo">
+          <img src="assets/home/sponsor/saudi-governance-center-logo.webp" alt="Saudi Governance Center">
+          <img src="assets/home/sponsor/prime-hr-solutions-logo.webp" alt="Prime HR Solutions">
+          <img src="assets/home/sponsor/dhl-logo.webp" alt="DHL">
+          <img src="assets/home/sponsor/bayzat-logo.webp" alt="Bayzat">
+          <img src="assets/home/sponsor/saudi-human-resources-development-fund.webp" alt="Human Resources Development Fund">
+          <img src="assets/home/sponsor/monshaat-logo.webp" alt="Monsha'at">
+          <img src="assets/home/sponsor/made-in-saudi-logo.webp" alt="Made in Saudi">
+          <img src="assets/home/sponsor/ministry-of-hr-and-sd-logo.webp" alt="Ministry of Human Resources and Social Development">
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer" id="connect">
+      <div class="footer-top footer-inner">
+        <img src="assets/taleed-logo-full-white.png" alt="Aramco Taleed" class="footer-logo">
+        <div class="footer-connect">
+          <p>Ready to get started?</p>
+          <a class="footer-button" href="/apply">
+            <span>Get Connected</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z" stroke="#1741C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 16L16 12L12 8" stroke="#1741C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 12H16" stroke="#1741C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-content footer-inner">
+        <section class="footer-newsletter footer-newsletter-desktop" aria-labelledby="newsletter-title-desktop">
+          <h2 id="newsletter-title-desktop">Subscribe to our<br class="footer-break-desktop"> newsletter</h2>
+          <form class="newsletter-form" action="/newsletter/subscribe" method="post">
+            <div class="newsletter-email-row">
+              <input type="email" name="email" placeholder="Email Address" aria-label="Email Address">
+              <button type="button" aria-label="Subscribe">
+                <svg width="31" height="32" viewBox="0 0 31 32" fill="none" aria-hidden="true"><path d="M12.9166 21.3142L18.0833 16.1475L12.9166 10.9808" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            <label class="newsletter-consent"><input type="checkbox" name="agree_terms" required><span>I agree to the <a href="/terms" target="_blank" rel="noreferrer">Terms &amp; Conditions</a>.</span></label>
+          </form>
+          <div class="footer-legal"><a href="/privacy-policy">Privacy Policy</a><a href="/terms">Terms &amp; Conditions</a></div>
+        </section>
+
+        <div class="footer-column"><a class="footer-column-title" href="/services">Services</a></div>
+        <div class="footer-column"><a class="footer-column-title" href="/ecosystem-partner-services">Ecosystem Partnerships</a></div>
+
+        <section class="footer-column">
+          <h2 class="footer-column-title">About</h2>
+          <a href="/about-us">About Us</a>
+          <a href="/news">News</a>
+          <a href="/events">Events</a>
+        </section>
+
+        <section class="footer-column footer-resources">
+          <h2 class="footer-column-title">Resources</h2>
+          <a href="https://madd.futurework.com.sa/madd-enterprise" target="_blank" rel="noreferrer">Madd Platform</a>
+          <div class="footer-socials footer-socials-desktop">
+            <a href="https://x.com/AramcoTaleed" target="_blank" rel="noreferrer" aria-label="X"><img src="assets/x-logo.png" alt=""></a>
+            <a href="https://www.linkedin.com/company/aramcotaleed/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><img src="assets/linkedin-1.png" alt=""></a>
+            <a href="https://www.youtube.com/@AramcoTaleed" target="_blank" rel="noreferrer" aria-label="YouTube"><img src="assets/youtube.png" alt=""></a>
+          </div>
+        </section>
+
+        <section class="footer-newsletter footer-newsletter-mobile" aria-labelledby="newsletter-title-mobile">
+          <h2 id="newsletter-title-mobile">Subscribe to our newsletter</h2>
+          <form class="newsletter-form" action="/newsletter/subscribe" method="post">
+            <div class="newsletter-email-row">
+              <input type="email" name="email" placeholder="Email Address" aria-label="Email Address">
+              <button type="button" aria-label="Subscribe">
+                <svg width="31" height="32" viewBox="0 0 31 32" fill="none" aria-hidden="true"><path d="M12.9166 21.3142L18.0833 16.1475L12.9166 10.9808" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            <label class="newsletter-consent"><input type="checkbox" name="agree_terms" required><span>I agree to the <a href="/terms" target="_blank" rel="noreferrer">Terms &amp; Conditions</a>.</span></label>
+          </form>
+          <div class="footer-socials footer-socials-mobile">
+            <a href="https://x.com/AramcoTaleed" target="_blank" rel="noreferrer" aria-label="X"><img src="assets/x-logo.png" alt=""></a>
+            <a href="https://www.linkedin.com/company/aramcotaleed/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><img src="assets/linkedin-1.png" alt=""></a>
+            <a href="https://www.youtube.com/@AramcoTaleed" target="_blank" rel="noreferrer" aria-label="YouTube"><img src="assets/youtube.png" alt=""></a>
+          </div>
+          <div class="footer-legal"><a href="/privacy-policy">Privacy Policy</a><a href="/terms">Terms &amp; Conditions</a></div>
+        </section>
+      </div>
+    </footer>
+  </main>
+
+  <div class="modal fade" id="introVideo" tabindex="-1" aria-labelledby="introVideoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content video-modal-content">
+        <button type="button" class="btn-close video-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <video controls playsinline preload="metadata" poster="assets/home/home-vid-thumb.webp">
+          <source src="assets/entaleedvideohome.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
+      </div>
+    </div>
   </div>
+
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

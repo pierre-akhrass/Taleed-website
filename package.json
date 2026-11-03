@@ -1,29 +1,17 @@
 {
-  "name": "taleed-website",
+  "name": "taleed-native-homepage",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp build",
     "dev": "gulp dev"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pierre-akhrass/Taleed-website.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pierre-akhrass/Taleed-website/issues"
-  },
-  "homepage": "https://github.com/pierre-akhrass/Taleed-website#readme",
-  "description": "",
-  "dependencies": {
-    "bootstrap": "^5.3.8"
-  },
   "devDependencies": {
-    "browser-sync": "^3.0.4",
-    "gulp": "^5.0.1"
+    "bootstrap": "^5.3.8",
+    "browser-sync": "^3.0.2",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.107.1",
+    "swiper": "^10.3.1"
   }
 }
