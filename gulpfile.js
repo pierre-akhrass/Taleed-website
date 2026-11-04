@@ -40,7 +40,7 @@ const assets = () =>
 const build = series(clean, parallel(html, styles, vendorCss, vendorJs, js, assets));
 
 function serve() {
-  browserSync.init({ server: paths.dist });
+  browserSync.init({ server: paths.dist, startPath: '/ecosystem.html' });
   watch(paths.html, html);
   watch(paths.scss, styles);
   watch(paths.js, js);
