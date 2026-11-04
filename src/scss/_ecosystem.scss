@@ -1,0 +1,96 @@
+.ecosystem-page {
+  --ecosystem-blue: #1940c9;
+  --ecosystem-pale: #edf2ff;
+  --ecosystem-ink: #171f30;
+  .ecosystem-wrap { width: min(86%, 1240px); margin-inline: auto; }
+  main p { font-family: "Open Sans", Arial, sans-serif; font-size: 18px; line-height: 1.45; }
+  main h1, .ecosystem-heading h2, .ecosystem-gateway h2, .enable-card h3 { font-family: "Montserrat", Arial, sans-serif; font-weight: 700; }
+  .navbar-nav .nav-link { font-size: 14px; white-space: nowrap; }
+  .ecosystem-hero { width: calc(100% - 40px); max-width: 1800px; margin: 22px auto 0; aspect-ratio: 1405 / 444; min-height: 420px; border-radius: 8px; overflow: hidden; display: flex; align-items: center; background: #101657 url("../assets/ecosystem/ecosystem-hero.png") center / cover no-repeat; }
+  .ecosystem-hero-copy { width: 46%; padding: 46px 0 46px 4.5%; color: #fff; }
+  .ecosystem-hero h1 { margin: 0 0 16px; font-size: 36px; line-height: 1.2; }
+  .ecosystem-hero p { margin: 0; font-size: 24px; line-height: 1.1; }
+  .ecosystem-hero-apply { width: 328px; max-width: 100%; margin-top: 78px; color: #1741c9; background: #fff; font: 18px "Open Sans", Arial, sans-serif; }
+  .ecosystem-hero-apply:hover, .ecosystem-hero-apply:focus { background: #eef2ff; color: #1741c9; }
+  .ecosystem-heading { text-align: center; }
+  .ecosystem-heading h2, .ecosystem-gateway h2 { margin: 0 0 24px; color: var(--ecosystem-blue); font-size: 32px; line-height: 1.2; }
+  .ecosystem-heading > p { max-width: 820px; margin: 0 auto; color: var(--ecosystem-ink); }
+  .ecosystem-impact { padding-block: 76px 94px; }
+  .ecosystem-impact .card-grid { margin-top: 54px; gap: 24px; }
+  .enable-card { border: 1px solid #f1f1f1; border-radius: 8px; box-shadow: 0 3px 8px rgb(0 0 0 / 3%); }
+  .enable-card > img { display: block; width: 100%; height: auto; aspect-ratio: 396 / 219; object-fit: cover; }
+  .enable-card-copy { padding: 24px 12px 32px; }
+  .enable-card h3 { color: #000; font-size: 24px; line-height: 1.2; margin-bottom: 12px; }
+  .enable-card p { color: #2d2d2d; font-size: 18px; line-height: 1.4; }
+  .ecosystem-gateway { background: var(--ecosystem-pale); padding-block: 40px; }
+  .ecosystem-gateway-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 13%; align-items: center; }
+  .ecosystem-accreditation { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; font: 600 24px "Open Sans", Arial, sans-serif; color: #383333; }
+  .ecosystem-accreditation img { width: 56px; height: 56px; object-fit: contain; flex-shrink: 0; }
+  .ecosystem-gateway h2 { margin-bottom: 20px; }
+  .ecosystem-gateway p { margin: 0 0 14px; color: var(--ecosystem-ink); }
+  .ecosystem-gateway p:last-child { margin-bottom: 0; }
+  .ecosystem-gateway-image { display: block; width: 100%; aspect-ratio: 1.32; object-fit: cover; border: 5px solid #fff; border-radius: 12px; }
+  .ecosystem-opportunities { padding-block: 110px 90px; }
+  .ecosystem-opportunities-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px 60px; margin-top: 44px; text-align: center; }
+  .ecosystem-icon { display: grid; place-items: center; width: 74px; height: 74px; margin: 0 auto 16px; border-radius: 50%; background: var(--ecosystem-pale); }
+  .ecosystem-icon img { display: block; width: 32px; height: 32px; object-fit: contain; }
+  .ecosystem-opportunities-grid h3 { margin: 0 0 12px; color: var(--ecosystem-ink); font: 700 24px/1.6 "Open Sans", Arial, sans-serif; }
+  .ecosystem-opportunities-grid p { margin: 0; color: #354158; font-size: 16px; }
+  .ecosystem-journey { padding-block: 60px 130px; }
+  .ecosystem-journey .ecosystem-heading h2 { margin-bottom: 16px; }
+  .ecosystem-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; list-style: none; padding: 0; margin: 68px 0 0; text-align: center; }
+  .ecosystem-steps .ecosystem-icon { width: 108px; height: 108px; margin-bottom: 32px; }
+  .ecosystem-steps .ecosystem-icon img { width: 54px; height: 54px; }
+  .ecosystem-steps h3 { font: 700 21px/1.3 "Open Sans", Arial, sans-serif; margin: 0 0 24px; color: #2d2d2d; }
+  .ecosystem-steps p { margin: 0; }
+  .ecosystem-join { background: var(--ecosystem-pale); padding-block: 112px; }
+  .ecosystem-join .ecosystem-heading > p { max-width: 720px; font-size: 21px; font-weight: 500; line-height: 1.3; }
+  .ecosystem-join .btn { width: 310px; max-width: 100%; margin-top: 44px; font: 18px "Open Sans", Arial, sans-serif; }
+  .ecosystem-partners { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 48px; align-items: center; padding-block: 70px; }
+  .ecosystem-partners img { display: block; width: 100%; height: 90px; padding: 8px; object-fit: contain; }
+  .footer-button { border: 0; }
+  .site-footer { margin-top: 10px; }
+  @media (max-width: 1199.98px) {
+    .ecosystem-hero-copy { width: 52%; }
+    .ecosystem-hero h1 { font-size: 30px; }
+    .ecosystem-hero p { font-size: 20px; }
+    .ecosystem-hero-apply { margin-top: 44px; }
+    .ecosystem-gateway-grid { gap: 40px; }
+    .ecosystem-accreditation { font-size: 20px; }
+    .ecosystem-opportunities-grid { gap: 36px 28px; }
+    .ecosystem-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; }
+    .ecosystem-partners { gap: 24px; }
+  }
+  @media (max-width: 767.98px) {
+    .ecosystem-wrap { width: 90%; }
+    .ecosystem-hero { width: calc(100% - 24px); aspect-ratio: auto; min-height: 440px; background-position: 35% center; }
+    .ecosystem-hero-copy { width: 72%; padding: 32px 20px; }
+    .ecosystem-hero h1 { font-size: 28px; }
+    .ecosystem-hero h1 br { display: none; }
+    .ecosystem-hero p { font-size: 18px; line-height: 1.35; }
+    .ecosystem-heading h2, .ecosystem-gateway h2 { font-size: 26px; }
+    main p, .enable-card p { font-size: 16px; }
+    .ecosystem-impact { padding-block: 48px 56px; }
+    .ecosystem-impact .card-grid { margin-top: 32px; }
+    .ecosystem-gateway-grid { grid-template-columns: 1fr; gap: 28px; }
+    .ecosystem-accreditation { font-size: 18px; }
+    .ecosystem-accreditation img { width: 44px; height: 44px; }
+    .ecosystem-opportunities { padding-block: 56px 30px; }
+    .ecosystem-opportunities-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 20px; }
+    .ecosystem-opportunities-grid h3 { font-size: 18px; line-height: 1.4; }
+    .ecosystem-opportunities-grid p { font-size: 14px; }
+    .ecosystem-journey { padding-block: 48px 64px; }
+    .ecosystem-steps { margin-top: 40px; gap: 32px 16px; }
+    .ecosystem-steps .ecosystem-icon { width: 84px; height: 84px; margin-bottom: 20px; }
+    .ecosystem-steps .ecosystem-icon img { width: 42px; height: 42px; }
+    .ecosystem-steps h3 { font-size: 18px; margin-bottom: 12px; }
+    .ecosystem-join { padding-block: 64px; }
+    .ecosystem-join .ecosystem-heading > p { font-size: 18px; }
+    .ecosystem-partners { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding-block: 40px; }
+    .ecosystem-partners img { height: 68px; padding: 0; }
+  }
+  @media (max-width: 399.98px) {
+    .ecosystem-hero-copy { width: 85%; }
+    .ecosystem-opportunities-grid { grid-template-columns: 1fr; }
+  }
+}
