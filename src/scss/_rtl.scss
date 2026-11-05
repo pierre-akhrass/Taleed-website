@@ -1,0 +1,50 @@
+/* RTL (Arabic) overrides: only apply to pages with dir="rtl" */
+[dir="rtl"] {
+  body, p, a, li, label, input, select, button, blockquote, legend {
+    font-family: "IBM Plex Sans Arabic", "Manifa2", Arial, sans-serif;
+  }
+  h1, h2, h3, h4, .blue-title, .eyebrow {
+    font-family: "IBM Plex Sans Arabic", "Montserrat", Arial, sans-serif;
+    letter-spacing: 0 !important;
+  }
+  .filter-categories legend { letter-spacing: 0; }
+
+  .language-link { margin-left: 0; margin-right: 8px; }
+  .header-cta { margin-left: 0; margin-right: 28px; }
+
+  .newsletter-email-row button svg,
+  .footer-button svg { transform: scaleX(-1); }
+
+  .page-hero { background-position: center left; }
+  .page-hero-content { padding: 0 7% 0 0; }
+  .filter-select { padding: 0 16px 0 40px; background-position: left 18px center; }
+  .filter-search { padding: 0 16px 0 18px; }
+  .opp-link span { margin-left: 0; margin-right: 4px; }
+
+  .insight-card-media > span { left: auto; right: 12px; }
+  h3 button { text-align: right; }
+
+  @media (max-width: 767.98px) {
+    .page-hero-content { padding: 0 24px; }
+  }
+}
+
+/* Ecosystem + Insights hero (Arabic): mirror the photo so the dark side sits behind
+   the text on the right, and move the copy's padding to the right edge */
+[dir="rtl"] {
+  .ecosystem-hero, .insights-hero { position: relative; overflow: hidden; background-image: none; }
+  .ecosystem-hero::before, .insights-hero::before {
+    content: ""; position: absolute; inset: 0; z-index: 0;
+    background-position: center; background-size: cover; background-repeat: no-repeat;
+    transform: scaleX(-1);
+  }
+  .ecosystem-hero::before { background-image: url("../assets/ecosystem/ecosystem-hero.png"); }
+  .insights-hero::before { background-image: url("../assets/insights/insights-hero.png"); }
+  .ecosystem-hero-copy, .insights-hero-copy { position: relative; z-index: 1; text-align: right; }
+  .ecosystem-hero-copy { padding: 46px 4.5% 46px 0; }
+  .insights-hero-copy { padding: 48px 6% 48px 0; }
+
+  @media (max-width: 767.98px) {
+    .ecosystem-hero-copy, .insights-hero-copy { padding: 28px 20px; }
+  }
+}
