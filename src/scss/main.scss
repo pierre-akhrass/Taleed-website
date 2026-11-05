@@ -387,3 +387,8 @@ a { text-decoration: none; }
 @import "investments";
 @import "insights";
 @import "ecosystem";
+/* Header: center the navigation links between the logo and the CTA (desktop) */
+@media (min-width: 1200px) {
+  .site-header .navbar-nav { margin-left: auto !important; margin-right: auto !important; }
+  .site-header .header-cta { margin-left: 0; }
+}

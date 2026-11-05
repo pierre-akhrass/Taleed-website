@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cards.forEach((card) => { card.hidden = true; });
     matches.slice(0, visibleLimit).forEach((card) => { card.hidden = false; });
     empty.hidden = matches.length > 0;
+    loadMore.hidden = matches.length <= visibleLimit;
   }
 
   [...checks, affiliate, search].forEach((el) => {
