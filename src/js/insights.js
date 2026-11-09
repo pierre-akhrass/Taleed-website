@@ -33,15 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
     button.addEventListener('click', () => {
       document.getElementById('insightPreviewTitle').textContent = button.dataset.insightTitle;
       document.getElementById('insightPreviewCopy').textContent = button.closest('article').querySelector('p')?.textContent || '';
-      bootstrap.Modal.getOrCreateInstance(preview).show();
+      window.SiteModal.open(preview, button);
     });
   });
 
-  document.getElementById('insightsVideo').addEventListener('hidden.bs.modal', (event) => {
-    event.target.querySelector('video').pause();
-  });
   document.querySelector('.newsletter-form').addEventListener('submit', (event) => {
     event.preventDefault();
-    bootstrap.Modal.getOrCreateInstance(document.getElementById('insightsSubscribe')).show();
+    window.SiteModal.open(document.getElementById('insightsSubscribe'));
   });
 });

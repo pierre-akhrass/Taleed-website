@@ -1,4 +1,97 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const navigationToggle = document.querySelector('.nav-toggle');
+  const navigation = document.getElementById('siteNavigation');
+
+  function setNavigationOpen(isOpen) {
+    if (!navigationToggle || !navigation) return;
+    navigation.classList.toggle('is-open', isOpen);
+    navigationToggle.setAttribute('aria-expanded', String(isOpen));
+  }
+
+  navigationToggle?.addEventListener('click', () => {
+    setNavigationOpen(navigationToggle.getAttribute('aria-expanded') !== 'true');
+  });
+
+  navigation?.querySelectorAll('.nav-link').forEach((link) => {
+    link.addEventListener('click', () => setNavigationOpen(false));
+  });
+
+  const SiteModal = {
+    active: null,
+    trigger: null,
+    open(modal, trigger = document.activeElement) {
+      if (!modal) return;
+      this.active = modal;
+      this.trigger = trigger;
+      modal.hidden = false;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      modal.setAttribute('aria-hidden', 'false');
+      modal.setAttribute('role', 'dialog');
+      modal.setAttribute('aria-modal', 'true');
+      document.body.classList.add('modal-open');
+      (modal.querySelector('[data-modal-dismiss]') || modal).focus();
+    },
+    close(modal = this.active) {
+      if (!modal) return;
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+      modal.hidden = true;
+      modal.setAttribute('aria-hidden', 'true');
+      modal.removeAttribute('aria-modal');
+      modal.querySelectorAll('video').forEach((video) => {
+        video.pause();
+        video.currentTime = 0;
+      });
+      document.body.classList.remove('modal-open');
+      if (this.active === modal) {
+        this.active = null;
+        this.trigger?.focus();
+        this.trigger = null;
+      }
+    }
+  };
+  window.SiteModal = SiteModal;
+
+  document.addEventListener('click', (event) => {
+    const trigger = event.target.closest('[data-modal-target]');
+    if (trigger) {
+      SiteModal.open(document.querySelector(trigger.dataset.modalTarget), trigger);
+      return;
+    }
+    const dismiss = event.target.closest('[data-modal-dismiss]');
+    if (dismiss) {
+      SiteModal.close(dismiss.closest('.site-modal'));
+      return;
+    }
+    if (event.target.classList.contains('site-modal')) SiteModal.close(event.target);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      SiteModal.close();
+      setNavigationOpen(false);
+      return;
+    }
+    if (event.key === 'Tab' && SiteModal.active) {
+      const focusable = Array.from(SiteModal.active.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'));
+      if (!focusable.length) {
+        event.preventDefault();
+        SiteModal.active.focus();
+        return;
+      }
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+  });
+
   const heroElement = document.querySelector('.home-swiper');
   if (heroElement) {
     const slideCount = heroElement.querySelectorAll('.swiper-slide').length;
@@ -77,18 +170,4 @@ document.addEventListener('DOMContentLoaded', () => {
     statCounters.forEach(animateCounter);
   }
 
-  const videoModal = document.getElementById('introVideo');
-  const video = videoModal?.querySelector('video');
-  videoModal?.addEventListener('hidden.bs.modal', () => {
-    video.pause();
-    video.currentTime = 0;
-  });
-
-  document.querySelectorAll('#siteNavigation .nav-link').forEach((link) => {
-    link.addEventListener('click', () => {
-      const navigation = document.getElementById('siteNavigation');
-      const collapse = bootstrap.Collapse.getInstance(navigation);
-      collapse?.hide();
-    });
-  });
 });

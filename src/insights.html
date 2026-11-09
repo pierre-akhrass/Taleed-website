@@ -12,22 +12,22 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="insights-page">
-  <header class="site-header fixed-top">
-    <nav class="navbar navbar-expand-xl container-xl">
-      <a class="navbar-brand" href="index.html" aria-label="Taleed home"><img src="assets/taleed-logo.webp" alt="Aramco Taleed" class="brand-logo"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="siteNavigation">
-        <ul class="navbar-nav ms-auto align-items-xl-center gap-xl-4">
+  <header class="site-header">
+    <nav class="site-nav mx-auto flex w-full max-w-[1320px] items-center justify-between">
+      <a class="brand-link" href="index.html" aria-label="Taleed home"><img src="assets/taleed-logo.webp" alt="Aramco Taleed" class="brand-logo"></a>
+      <button class="nav-toggle" type="button" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation"><span class="nav-toggle-icon" aria-hidden="true"></span></button>
+      <div class="nav-menu" id="siteNavigation">
+        <ul class="nav-list flex xl:items-center xl:gap-4">
           <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#partnerships">Ecosystem Partnerships</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#partners">Events</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#partners">News</a></li>
           <li class="nav-item language-link"><a class="nav-link" href="insights-ar.html" lang="ar" hreflang="ar">العربية</a></li>
-          <li class="nav-item d-xl-none mt-3"><a class="btn btn-taleed w-100" href="#connect">Get Connected <span aria-hidden="true">&#8594;</span></a></li>
+          <li class="nav-item xl:hidden mt-3"><a class="btn-taleed w-full" href="#connect">Get Connected <span aria-hidden="true">&#8594;</span></a></li>
         </ul>
       </div>
-      <a class="btn btn-taleed header-cta d-none d-xl-flex" href="#connect">Get Connected <span aria-hidden="true">&#8594;</span></a>
+      <a class="btn-taleed header-cta hidden xl:flex" href="#connect">Get Connected <span aria-hidden="true">&#8594;</span></a>
     </nav>
   </header>
 
@@ -52,7 +52,7 @@
             <h2>SME Growth Opportunities</h2>
             <h3>Across Carbon Capture, Utilization &amp; Storage</h3>
             <p>Discover how Saudi SMEs can participate in the Kingdom's growing CCUS ecosystem, with practical opportunities across the value chain and insights into localization, innovation, and emerging market demand.</p>
-            <button type="button" class="btn btn-taleed" data-insight-title="SME Growth Opportunities Across Carbon Capture, Utilization &amp; Storage">Download White Paper <img src="assets/insights/arrow-icon.svg" width="24" height="24" alt=""></button>
+            <button type="button" class="btn-taleed" data-insight-title="SME Growth Opportunities Across Carbon Capture, Utilization &amp; Storage">Download White Paper <img src="assets/insights/arrow-icon.svg" width="24" height="24" alt=""></button>
           </div>
           <img class="insights-feature-image" src="assets/insights/featured-insights.png" alt="Carbon Capture, Utilization, and Storage Expansion white paper cover">
         </article>
@@ -92,7 +92,7 @@
         <section id="executive">
           <div class="insights-heading"><h2>Executive Perspectives</h2><a href="#executive" data-view-all="executive">View all</a></div>
           <article class="insights-executive" data-searchable>
-            <button class="insights-video-button" type="button" data-bs-toggle="modal" data-bs-target="#insightsVideo" aria-label="Play Building a More Competitive SME Ecosystem"><img src="assets/insights/executive-perspective.png" alt="Ahmed Al Khateb, Program Director" loading="lazy"><span aria-hidden="true">&#9655;</span></button>
+            <button class="insights-video-button" type="button" data-modal-target="#insightsVideo" aria-label="Play Building a More Competitive SME Ecosystem"><img src="assets/insights/executive-perspective.png" alt="Ahmed Al Khateb, Program Director" loading="lazy"><span aria-hidden="true">&#9655;</span></button>
             <h3>Building a More Competitive SME Ecosystem</h3><h4>Ahmed Al Khateb</h4><p>Program Director</p>
           </article>
         </section>
@@ -117,23 +117,23 @@
       </section>
     </div>
 
-    <section class="insights-subscribe"><h2>Never miss new insights</h2><p>Subscribe to receive the latest research, reports, SME resources and<br> ecosystem updates delivered directly to your inbox.</p><button class="btn btn-taleed" data-bs-toggle="modal" data-bs-target="#insightsSubscribe">Subscribe Now</button></section>
+    <section class="insights-subscribe"><h2>Never miss new insights</h2><p>Subscribe to receive the latest research, reports, SME resources and<br> ecosystem updates delivered directly to your inbox.</p><button class="btn-taleed" data-modal-target="#insightsSubscribe">Subscribe Now</button></section>
   </main>
 
   <footer class="site-footer" id="connect">
     <div class="footer-top footer-inner"><img src="assets/taleed-logo-full-white.png" alt="Aramco Taleed" class="footer-logo"><div class="footer-connect"><p>Ready to get started?</p><a class="footer-button" href="index.html#connect">Get Connected <span aria-hidden="true">&#8594;</span></a></div></div>
     <div class="footer-content footer-inner">
-      <section class="footer-newsletter"><h2>Subscribe to our<br>newsletter</h2><form class="newsletter-form"><div class="newsletter-email-row"><input type="email" placeholder="Email Address" aria-label="Email Address"><button type="button" data-bs-toggle="modal" data-bs-target="#insightsSubscribe" aria-label="Subscribe">&#8594;</button></div></form><div class="footer-legal"><a href="/privacy-policy">Privacy Notice</a><a href="/terms">Terms &amp; Conditions</a></div></section>
+      <section class="footer-newsletter"><h2>Subscribe to our<br>newsletter</h2><form class="newsletter-form"><div class="newsletter-email-row"><input type="email" placeholder="Email Address" aria-label="Email Address"><button type="button" data-modal-target="#insightsSubscribe" aria-label="Subscribe">&#8594;</button></div></form><div class="footer-legal"><a href="/privacy-policy">Privacy Notice</a><a href="/terms">Terms &amp; Conditions</a></div></section>
       <section class="footer-column"><h2 class="footer-column-title">Services</h2><a href="index.html#services">SME Creation &amp; Growth</a><a href="index.html#partnerships">Ecosystem Partnerships</a><a href="investment-opportunities.html">Investment Opportunities</a></section>
       <section class="footer-column"><h2 class="footer-column-title">About</h2><a href="index.html#about">About Us</a><a href="index.html#partners">News</a><a href="insights.html">Insights</a></section>
       <section class="footer-column"><h2 class="footer-column-title">Resources</h2><a href="https://madd.futurework.com.sa/madd-enterprise" target="_blank" rel="noreferrer">Madd Platform</a><div class="footer-socials"><a href="https://x.com/AramcoTaleed" aria-label="X"><img src="assets/x-logo.png" alt=""></a><a href="https://www.linkedin.com/company/aramcotaleed/" aria-label="LinkedIn"><img src="assets/linkedin-1.png" alt=""></a><a href="https://www.youtube.com/@AramcoTaleed" aria-label="YouTube"><img src="assets/youtube.png" alt=""></a></div></section>
     </div>
   </footer>
 
-  <div class="modal fade" id="insightPreview" tabindex="-1" aria-labelledby="insightPreviewTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title fs-5" id="insightPreviewTitle">Insight</h2><button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><p id="insightPreviewCopy"></p><p class="text-secondary">The full publication is not available in this preview.</p></div></div></div></div>
-  <div class="modal fade" id="insightsSubscribe" tabindex="-1" aria-labelledby="insightsSubscribeTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title fs-5" id="insightsSubscribeTitle">Insights Newsletter</h2><button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><p>Newsletter subscriptions are not available yet. No email addresses are collected in this preview.</p></div></div></div></div>
-  <div class="modal fade" id="insightsVideo" tabindex="-1" aria-labelledby="insightsVideoTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-xl"><div class="modal-content"><div class="modal-header"><h2 class="modal-title fs-5" id="insightsVideoTitle">Taleed Introduction</h2><button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><video controls playsinline preload="none" poster="assets/home/home-vid-thumb.webp"><source src="assets/entaleedvideohome.mp4" type="video/mp4"></video></div></div></div></div>
-  <script src="js/bootstrap.bundle.min.js"></script>
+  <div class="site-modal fixed inset-0 z-[200] hidden items-center justify-center bg-black/50 p-4" id="insightPreview" tabindex="-1" aria-labelledby="insightPreviewTitle" aria-hidden="true"><div class="modal-dialog w-full max-w-lg"><div class="modal-content rounded-xl bg-white p-7 shadow-xl"><div class="modal-header flex items-start gap-4 border-b border-gray-200 pb-4"><h2 class="modal-title text-xl font-semibold" id="insightPreviewTitle">Insight</h2><button class="modal-close ml-auto" data-modal-dismiss aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body pt-5"><p id="insightPreviewCopy"></p><p class="text-gray-600">The full publication is not available in this preview.</p></div></div></div></div>
+  <div class="site-modal fixed inset-0 z-[200] hidden items-center justify-center bg-black/50 p-4" id="insightsSubscribe" tabindex="-1" aria-labelledby="insightsSubscribeTitle" aria-hidden="true"><div class="modal-dialog w-full max-w-lg"><div class="modal-content rounded-xl bg-white p-7 shadow-xl"><div class="modal-header flex items-start gap-4 border-b border-gray-200 pb-4"><h2 class="modal-title text-xl font-semibold" id="insightsSubscribeTitle">Insights Newsletter</h2><button class="modal-close ml-auto" data-modal-dismiss aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body pt-5"><p>Newsletter subscriptions are not available yet. No email addresses are collected in this preview.</p></div></div></div></div>
+  <div class="site-modal fixed inset-0 z-[200] hidden items-center justify-center bg-black/50 p-4" id="insightsVideo" tabindex="-1" aria-labelledby="insightsVideoTitle" aria-hidden="true"><div class="modal-dialog w-full max-w-5xl"><div class="modal-content rounded-xl bg-white p-7 shadow-xl"><div class="modal-header flex items-start gap-4 border-b border-gray-200 pb-4"><h2 class="modal-title text-xl font-semibold" id="insightsVideoTitle">Taleed Introduction</h2><button class="modal-close ml-auto" data-modal-dismiss aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body pt-5"><video controls playsinline preload="none" poster="assets/home/home-vid-thumb.webp"><source src="assets/entaleedvideohome.mp4" type="video/mp4"></video></div></div></div></div>
+  <script src="js/main.js"></script>
   <script src="js/insights.js"></script>
 </body>
 </html>

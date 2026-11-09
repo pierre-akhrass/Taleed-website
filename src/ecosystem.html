@@ -12,12 +12,12 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="ecosystem-page">
-  <header class="site-header fixed-top">
-    <nav class="navbar navbar-expand-xl container-xl">
-      <a class="navbar-brand" href="index.html" aria-label="Taleed home"><img src="assets/taleed-logo.webp" alt="Aramco Taleed" class="brand-logo"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="siteNavigation">
-        <ul class="navbar-nav ms-auto align-items-xl-center gap-xl-4">
+  <header class="site-header">
+    <nav class="site-nav mx-auto flex w-full max-w-[1320px] items-center justify-between">
+      <a class="brand-link" href="index.html" aria-label="Taleed home"><img src="assets/taleed-logo.webp" alt="Aramco Taleed" class="brand-logo"></a>
+      <button class="nav-toggle" type="button" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation"><span class="nav-toggle-icon" aria-hidden="true"></span></button>
+      <div class="nav-menu" id="siteNavigation">
+        <ul class="nav-list flex xl:items-center xl:gap-4">
           <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="ecosystem.html" aria-current="page">Ecosystem Partnerships</a></li>
@@ -25,10 +25,10 @@
           <li class="nav-item"><a class="nav-link" href="index.html#partners">Events</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#partners">News</a></li>
           <li class="nav-item language-link"><a class="nav-link" href="ecosystem-ar.html" lang="ar" hreflang="ar">العربية</a></li>
-          <li class="nav-item d-xl-none mt-3"><a class="btn btn-taleed w-100" href="#connect">Get Connected <span aria-hidden="true">&#8594;</span></a></li>
+          <li class="nav-item xl:hidden mt-3"><a class="btn-taleed w-full" href="#connect">Get Connected <span aria-hidden="true">&#8594;</span></a></li>
         </ul>
       </div>
-      <a class="btn btn-taleed header-cta d-none d-xl-flex" href="#connect">Get Connected <span aria-hidden="true">&#8594;</span></a>
+      <a class="btn-taleed header-cta hidden xl:flex" href="#connect">Get Connected <span aria-hidden="true">&#8594;</span></a>
     </nav>
   </header>
 
@@ -37,7 +37,7 @@
       <div class="ecosystem-hero-copy">
         <h1>Become Part of the Aramco <br>Taleed Ecosystem</h1>
         <p>Explore partnership pathways and ecosystem programmes that support SME participation in Saudi Arabia's industrial ecosystem.</p>
-        <button class="btn btn-taleed ecosystem-hero-apply" type="button" data-bs-toggle="modal" data-bs-target="#ecosystemApplication">Apply Now</button>
+        <button class="btn-taleed ecosystem-hero-apply" type="button" data-modal-target="#ecosystemApplication">Apply Now</button>
       </div>
     </section>
 
@@ -88,7 +88,7 @@
     </section>
 
     <section class="ecosystem-join" id="apply">
-      <div class="ecosystem-wrap ecosystem-heading"><h2>Become Part of the Aramco Taleed Ecosystem</h2><p>Join a trusted network of organisations collaborating with Taleed to support SME growth through innovation, capability development and strategic partnerships.</p><button class="btn btn-taleed" type="button" data-bs-toggle="modal" data-bs-target="#ecosystemApplication">Apply Now</button></div>
+      <div class="ecosystem-wrap ecosystem-heading"><h2>Become Part of the Aramco Taleed Ecosystem</h2><p>Join a trusted network of organisations collaborating with Taleed to support SME growth through innovation, capability development and strategic partnerships.</p><button class="btn-taleed" type="button" data-modal-target="#ecosystemApplication">Apply Now</button></div>
     </section>
 
     <section class="ecosystem-partners ecosystem-wrap" aria-label="Ecosystem partners">
@@ -104,12 +104,12 @@
   <footer class="site-footer" id="connect">
     <div class="footer-top footer-inner">
       <img src="assets/taleed-logo-full-white.png" alt="Aramco Taleed" class="footer-logo">
-      <div class="footer-connect"><p>Ready to get started?</p><button type="button" class="footer-button" data-bs-toggle="modal" data-bs-target="#ecosystemApplication">Get Connected <span aria-hidden="true">&#8594;</span></button></div>
+      <div class="footer-connect"><p>Ready to get started?</p><button type="button" class="footer-button" data-modal-target="#ecosystemApplication">Get Connected <span aria-hidden="true">&#8594;</span></button></div>
     </div>
     <div class="footer-content footer-inner">
       <section class="footer-newsletter">
         <h2>Subscribe to our<br>newsletter</h2>
-        <div class="newsletter-form"><div class="newsletter-email-row"><input type="email" name="email" placeholder="Email Address" aria-label="Email Address"><button type="button" data-bs-toggle="modal" data-bs-target="#ecosystemNewsletter" aria-label="Subscribe">&#8594;</button></div><label class="newsletter-consent"><input type="checkbox" name="agree_terms"><span>I agree to the <a href="/terms">Terms &amp; Conditions</a>.</span></label></div>
+        <div class="newsletter-form"><div class="newsletter-email-row"><input type="email" name="email" placeholder="Email Address" aria-label="Email Address"><button type="button" data-modal-target="#ecosystemNewsletter" aria-label="Subscribe">&#8594;</button></div><label class="newsletter-consent"><input type="checkbox" name="agree_terms"><span>I agree to the <a href="/terms">Terms &amp; Conditions</a>.</span></label></div>
         <div class="footer-legal"><a href="/privacy-policy">Privacy Policy</a><a href="/terms">Terms &amp; Conditions</a></div>
       </section>
       <section class="footer-column"><h2 class="footer-column-title">Services</h2><a href="index.html#services">New Business Creation</a><a href="ecosystem.html">Ecosystem Partnerships</a><a href="investment-opportunities.html">Investment Opportunities</a></section>
@@ -117,8 +117,8 @@
       <section class="footer-column footer-resources"><h2 class="footer-column-title">Resources</h2><a href="https://madd.futurework.com.sa/madd-enterprise" target="_blank" rel="noreferrer">Madd Platform</a><div class="footer-socials"><a href="https://x.com/AramcoTaleed" target="_blank" rel="noreferrer" aria-label="X"><img src="assets/x-logo.png" alt=""></a><a href="https://www.linkedin.com/company/aramcotaleed/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><img src="assets/linkedin-1.png" alt=""></a><a href="https://www.youtube.com/@AramcoTaleed" target="_blank" rel="noreferrer" aria-label="YouTube"><img src="assets/youtube.png" alt=""></a></div></section>
     </div>
   </footer>
-  <div class="modal fade" id="ecosystemApplication" tabindex="-1" aria-labelledby="ecosystemApplicationTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title fs-5" id="ecosystemApplicationTitle">Become a Taleed Associate</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><p>Online applications are not available in this preview. The application form will be available when registration opens.</p></div></div></div></div>
-  <div class="modal fade" id="ecosystemNewsletter" tabindex="-1" aria-labelledby="ecosystemNewsletterTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title fs-5" id="ecosystemNewsletterTitle">Taleed Newsletter</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><p>Newsletter subscriptions are not available yet. No email addresses are collected in this preview.</p></div></div></div></div>
-  <script src="js/bootstrap.bundle.min.js"></script>
+  <div class="site-modal fixed inset-0 z-[200] hidden items-center justify-center bg-black/50 p-4" id="ecosystemApplication" tabindex="-1" aria-labelledby="ecosystemApplicationTitle" aria-hidden="true"><div class="modal-dialog w-full max-w-lg"><div class="modal-content rounded-xl bg-white p-7 shadow-xl"><div class="modal-header flex items-start gap-4 border-b border-gray-200 pb-4"><h2 class="modal-title text-xl font-semibold" id="ecosystemApplicationTitle">Become a Taleed Associate</h2><button type="button" class="modal-close ml-auto" data-modal-dismiss aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body pt-5"><p>Online applications are not available in this preview. The application form will be available when registration opens.</p></div></div></div></div>
+  <div class="site-modal fixed inset-0 z-[200] hidden items-center justify-center bg-black/50 p-4" id="ecosystemNewsletter" tabindex="-1" aria-labelledby="ecosystemNewsletterTitle" aria-hidden="true"><div class="modal-dialog w-full max-w-lg"><div class="modal-content rounded-xl bg-white p-7 shadow-xl"><div class="modal-header flex items-start gap-4 border-b border-gray-200 pb-4"><h2 class="modal-title text-xl font-semibold" id="ecosystemNewsletterTitle">Taleed Newsletter</h2><button type="button" class="modal-close ml-auto" data-modal-dismiss aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body pt-5"><p>Newsletter subscriptions are not available yet. No email addresses are collected in this preview.</p></div></div></div></div>
+  <script src="js/main.js"></script>
 </body>
 </html>

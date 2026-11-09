@@ -26,26 +26,26 @@
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z" fill="currentColor"/><circle cx="12" cy="10" r="2.5" fill="#fff"/></symbol>
   </svg>
 
-  <header class="site-header fixed-top">
-    <nav class="navbar navbar-expand-xl container-xl">
-      <a class="navbar-brand" href="index.html" aria-label="Taleed home">
+  <header class="site-header">
+    <nav class="site-nav mx-auto flex w-full max-w-[1320px] items-center justify-between">
+      <a class="brand-link" href="index.html" aria-label="Taleed home">
         <img src="assets/taleed-logo.webp" alt="Aramco Taleed" class="brand-logo">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button class="nav-toggle" type="button" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
       </button>
-      <div class="collapse navbar-collapse" id="siteNavigation">
-        <ul class="navbar-nav ms-auto align-items-xl-center gap-xl-4">
+      <div class="nav-menu" id="siteNavigation">
+        <ul class="nav-list flex xl:items-center xl:gap-4">
           <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#partnerships">Ecosystem Partnerships</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#partners">Events</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#partners">News</a></li>
           <li class="nav-item language-link"><a class="nav-link" href="investment-opportunities.html" lang="en" hreflang="en">English</a></li>
-          <li class="nav-item d-xl-none mt-3"><a class="btn btn-taleed w-100" href="#">Get Connected <span aria-hidden="true">&#8592;</span></a></li>
+          <li class="nav-item xl:hidden mt-3"><a class="btn-taleed w-full" href="#">Get Connected <span aria-hidden="true">&#8592;</span></a></li>
         </ul>
       </div>
-      <a class="btn btn-taleed header-cta d-none d-xl-flex" href="#">Get Connected <span aria-hidden="true">&#8592;</span></a>
+      <a class="btn-taleed header-cta hidden xl:flex" href="#">Get Connected <span aria-hidden="true">&#8592;</span></a>
     </nav>
   </header>
 
@@ -61,8 +61,8 @@
       <h2 class="blue-title">Explore or Submit Investment Opportunities</h2>
       <p class="lead-text">Whether you’re exploring existing investment opportunities or submitting a new one, Aramco Taleed supports SME investments through ecosystem partnerships, business enablement, and access to expertise across priority sectors.</p>
       <div class="pill-actions">
-        <a class="btn btn-taleed btn-sm-pill" href="#live">Explore Live Investment Opportunities</a>
-        <a class="btn btn-taleed btn-sm-pill" href="#submit">Submit an Investment Opportunity</a>
+        <a class="btn-taleed btn-sm-pill" href="#live">Explore Live Investment Opportunities</a>
+        <a class="btn-taleed btn-sm-pill" href="#submit">Submit an Investment Opportunity</a>
       </div>
     </section>
 
@@ -223,7 +223,7 @@
           </article>
         </div>
         <p class="opp-empty" id="oppEmpty" hidden>No opportunities match your filters.</p>
-        <div class="text-center"><button class="btn btn-taleed btn-load" id="loadMore" type="button">Load More</button></div>
+        <div class="text-center"><button class="btn-taleed btn-load" id="loadMore" type="button">Load More</button></div>
       </div>
     </section>
 
@@ -233,7 +233,7 @@
           <p class="eyebrow">Have an Opportunity to Share?</p>
           <h2>Submit your Investment Opportunity</h2>
           <p>If you have an investment or localization opportunity you’d like to establish within Saudi Arabia, Taleed can help connect you with the expertise, partnerships and ecosystem support needed to bring your project to life.</p>
-          <a class="btn btn-taleed btn-sm-pill" href="#">Submit an Investment Opportunity</a>
+          <a class="btn-taleed btn-sm-pill" href="#">Submit an Investment Opportunity</a>
         </div>
         <img class="submit-image" src="assets/investment/submit.png" alt="Submit your investment opportunity">
       </div>
@@ -359,8 +359,8 @@
       </section>
     </div>
   </footer>
-  <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
   <script src="js/investments.js"></script>
 </body>
 </html>

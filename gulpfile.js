@@ -1,6 +1,8 @@
 const { src, dest, series, parallel, watch } = require('gulp');
 const fs = require('fs/promises');
 const sass = require('gulp-sass')(require('sass'));
+const postcss = require('gulp-postcss');
+const tailwindcss = require('tailwindcss');
 const browserSync = require('browser-sync').create();
 
 const paths = {
@@ -18,6 +20,7 @@ const html = () => src(paths.html).pipe(dest(paths.dist)).pipe(browserSync.strea
 const styles = () =>
   src('src/scss/main.scss')
     .pipe(sass({ quietDeps: true, silenceDeprecations: ['import', 'global-builtin', 'color-functions', 'mixed-decls'] }).on('error', sass.logError))
+    .pipe(postcss([tailwindcss()]))
     .pipe(dest(`${paths.dist}/css`))
     .pipe(browserSync.stream());
 
@@ -26,7 +29,6 @@ const vendorCss = () =>
 
 const vendorJs = () =>
   src([
-    'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
     'node_modules/swiper/swiper-bundle.min.js',
   ]).pipe(dest(`${paths.dist}/js`));
 

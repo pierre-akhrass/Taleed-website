@@ -1,4 +1,5 @@
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@tailwind base;
+@tailwind components;
 
 @font-face {
   font-family: "Manifa2";
@@ -38,19 +39,28 @@ body {
 
 a { text-decoration: none; }
 .site-header {
+  position: fixed; top: 0; left: 0; right: 0;
   z-index: 100;
   background: #fff;
   box-shadow: 0 20px 25px -5px #9ca3af21, 0 8px 10px -6px rgb(0 0 0 / 10%);
   padding: 14px 0;
 }
-.site-header .navbar { min-height: 76px; }
+.site-nav { min-height: 76px; padding: 0 24px; }
 .brand-logo { display: block; width: 181px; height: auto; }
-.navbar-toggler {
+.nav-toggle {
   width: 50px; height: 50px; padding: 0; border: 1px solid #dedfe3;
   border-radius: 50%; display: grid; place-items: center;
 }
-.navbar-toggler:focus { box-shadow: 0 0 0 3px rgb(66 156 255 / 22%); }
-.navbar-nav .nav-link { color: #111116; font-size: 17px; font-weight: 600; }
+.nav-toggle:focus { box-shadow: 0 0 0 3px rgb(66 156 255 / 22%); }
+.nav-toggle-icon, .nav-toggle-icon::before, .nav-toggle-icon::after { display: block; width: 19px; height: 2px; background: #222; }
+.nav-toggle-icon { position: relative; }
+.nav-toggle-icon::before, .nav-toggle-icon::after { position: absolute; left: 0; content: ""; }
+.nav-toggle-icon::before { top: -6px; }
+.nav-toggle-icon::after { top: 6px; }
+.nav-menu { display: none; position: absolute; top: 100%; left: 0; right: 0; padding: 20px 7% 26px; background: #fff; box-shadow: 0 14px 18px rgb(0 0 0 / 9%); }
+.nav-menu.is-open { display: block; }
+.nav-list { list-style: none; flex-direction: column; margin: 0; padding: 0; }
+.nav-list .nav-link { color: #111116; font-size: 17px; font-weight: 600; }
 .language-link { margin-left: 8px; }
 .btn-taleed {
   min-height: 50px; padding: 11px 22px; border: 0; border-radius: 50rem;
@@ -60,6 +70,21 @@ a { text-decoration: none; }
 }
 .btn-taleed:hover, .btn-taleed:focus { color: #fff; background: #1035aa; transform: translateY(-1px); }
 .header-cta { min-width: 200px; margin-left: 28px; }
+
+@media (min-width: 1200px) {
+  .nav-toggle { display: none; }
+  .nav-menu { position: static; display: block; flex: 1; padding: 0; background: transparent; box-shadow: none; }
+  .nav-list { flex-direction: row; justify-content: center; }
+}
+
+.site-modal { overflow-y: auto; }
+.modal-content { max-height: calc(100vh - 2rem); overflow-y: auto; }
+.modal-close { display: grid; place-items: center; width: 36px; height: 36px; flex: 0 0 36px; border: 0; border-radius: 50%; background: #f3f4f6; color: #222; font-size: 24px; line-height: 1; }
+.modal-close:hover { background: #e5e7eb; }
+.modal-body p { margin: 0 0 14px; }
+.modal-body p:last-child { margin-bottom: 0; }
+.modal-body video { display: block; width: 100%; max-height: 72vh; background: #000; }
+body.modal-open { overflow: hidden; }
 
 .hero-shell { width: 98%; max-width: 1800px; margin: 0 auto; border-radius: 16px; overflow: hidden; }
 .home-swiper { position: relative; overflow: hidden; }
@@ -179,7 +204,7 @@ a { text-decoration: none; }
 .enable-card h3 { margin: 0 0 12px; font-size: 21px; line-height: 1.35; font-weight: 700; }
 .enable-card p { margin: 0; color: #6b7280; line-height: 1.65; }
 .service-action { padding-top: 55px; }
-.service-action .btn { min-width: 230px; }
+.service-action .btn-taleed { min-width: 230px; }
 
 .opportunity-section { padding-top: 82px; padding-bottom: 90px; }
 .opportunity-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
@@ -316,9 +341,8 @@ a { text-decoration: none; }
 
 @media (max-width: 1199.98px) {
   body { padding-top: 106px; }
-  .site-header .navbar { width: 100%; }
-  .site-header .navbar-collapse { position: absolute; top: 100%; left: 0; right: 0; padding: 20px 7% 26px; background: #fff; box-shadow: 0 14px 18px rgb(0 0 0 / 9%); }
-  .navbar-nav .nav-link { padding: 10px 0; }
+  .site-header .site-nav { width: 100%; }
+  .nav-list .nav-link { display: block; padding: 10px 0; }
   .hero-shell { width: calc(100% - 30px); }
   .hero-shell .swiper-slide { min-height: 520px; height: 74vh; }
   .hero-content { padding-left: 34%; padding-right: 5%; }
@@ -332,7 +356,7 @@ a { text-decoration: none; }
 @media (max-width: 767.98px) {
   body { padding-top: 90px; }
   .site-header { padding: 10px 0; }
-  .site-header .navbar { min-height: 66px; padding-right: 18px; padding-left: 18px; }
+  .site-header .site-nav { min-height: 66px; padding-right: 18px; padding-left: 18px; }
   .brand-logo { width: 155px; }
   .hero-shell { width: calc(100% - 24px); border-radius: 12px; }
   .hero-shell .swiper-slide { min-height: 560px; height: 74vh; }
@@ -389,8 +413,9 @@ a { text-decoration: none; }
 @import "ecosystem";
 /* Header: center the navigation links between the logo and the CTA (desktop) */
 @media (min-width: 1200px) {
-  .site-header .navbar-nav { margin-left: auto !important; margin-right: auto !important; }
+  .site-header .nav-list { margin-left: auto; margin-right: auto; }
   .site-header .header-cta { margin-left: 0; }
 }
 
 @import "rtl";
+@tailwind utilities;
